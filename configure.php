@@ -6,5 +6,7 @@ $dPass = "";
 $con = mysqli_connect("$dHost","$dUser","$dPass");
 if (!$con)  {
   die('Could not connect: ' . mysqli_error());
-  }
+  }else {
+    $GLOBALS['con'] = $con;
+}
 ?>

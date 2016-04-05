@@ -13,8 +13,7 @@ include 'connect.php';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
         <script src="jquery-2.1.4.js"></script>
-        <script src="ajax.js"></script>
-        
+        <script src="ajax.js"></script>      
     </head>
     <body onload="intAJAX()">
     <div class="containz">      
