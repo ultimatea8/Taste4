@@ -15,12 +15,15 @@ function createXmlHttpRequestObject() {
 			xmlHttp = false;
 			}
 		}
+	
 	if(!xmlHttp)
 		alert("no work");
 	else
 		return xmlHttp;
 }
-/*	 try{ 
+/*	 
+	
+	  try{ 
 		  // Opera 8.0+, Firefox, Safari 
 		  xmlHttp = new XMLHttpRequest();
 	  }catch (e){
@@ -33,19 +36,21 @@ function createXmlHttpRequestObject() {
 				  }catch (e){
 					  // Something went wrong
 					  alert("Your browser sux!"); return false;
-					  } 				  } 	  } }
-*/
+					  } 
+				  } 
+	  } 
+}*/
 
 function intAJAX() {
 	if(xmlHttp.readyState==0 || xmlHttp.readyState==4){
-		innput = encodeURIComponent(document.getElementById("daInput").value);
-		//xmlHttp.open("POST","doorDB.php",true);
-		xmlHttp.open("GET","doorDB.php?daInput="+innput, true);
+		innput = encodeURIComponent(document.getElementById("NameInput").value);
+		//xmlHttp.open("POST","nameDB.php",true);
+		xmlHttp.open("GET","nameDB.php?NameInput="+innput, true);
 		xmlHttp.onreadystatechange = handleServerResponse;
 		xmlHttp.send(null);
-		//xmlHttp.send("daInput=" + input);
+		//xmlHttp.send("NameInput=" + input);
 	}else {
-		setTimeout('intAJAX()',1000);
+		setTimeout('intAJAX()',700);
 	}
 }
 
@@ -55,19 +60,20 @@ function handleServerResponse() {
 			xmlResponse = xmlHttp.responseXML;
 			xmlDocumentElement = xmlResponse.documentElement;
 			message = xmlDocumentElement.firstChild.data;
-			document.getElementById("daOutput").innerHTML = '<span style="color:green">'+ message+"</span>";
-			setTimeout('intAJAX()', 1000);
+			document.getElementById("NameOutput").innerHTML = '<span style="color:green">'+ message+"</span>";
+			setTimeout('intAJAX()', 700);
 		}
 		else{
 			alert('Something went worng');
 		}
 	}
-	var s;
-	s="<ul>"
+	var s, tex;
+	sample="<ul>"
 		+"<li>sunshine pic</li>"
 		+"<li>smile pic</li>"
 		+"<li>hair pic</li>"
 		+"</ul>";
-	divPortfolio = document.getElementById("Portfolio");
-	divPortfolio.innerHTML = s;
+    tex = "Search by Name:";
+	divPortfolio = document.getElementById("ByNameArea");
+	divPortfolio.innerHTML = tex;
 }

@@ -1,0 +1,36 @@
+https://en.wikipedia.org/wiki/List_of_cuisines
+
+https://en.wikipedia.org/wiki/Category:Lists_of_foods
+
+
+
+pull data from wikipedia
+
+http://www.barattalo.it/php/php-bot-to-get-wikipedia-definitions/
+
+http://stackoverflow.com/questions/10467492/how-to-extract-data-from-a-wikipedia-article
+
+
+
+food menus
+http://www.allmenus.com/
+https://www.grubhub.com/
+       
+http://eat24.com/
+http://www.foodme.io/#/landing_page
+http://eat24hours.com
+http://www.hotsited.com/www.allmenus.com
+http://www.menupix.com/
+
+http://www.openmenu.com/
+        http://openmenu.org/api/
+https://locu.com/
+        https://dev.locu.com/
+
+
+
+apps to intergrate with
+yelp
+4square
+trip advisors
+yellow pages
